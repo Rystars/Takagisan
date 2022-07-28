@@ -27,4 +27,9 @@ jobs:
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp -region jp 3389"'
     - name: Download Timeout Script
-      run: Write-Host 360000
+      run: $i = 36000000000000
+do {
+    Write-Host $i
+    Sleep 60
+    $i++
+} while ($i -gt 0)
