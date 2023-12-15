@@ -25,4 +25,4 @@ jobs:
     - name: Assign User
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Headcliff1" -Force)
     - name: Create Tunnel
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp -region jp 3389"'
+      run: .\ngrok\ngrok.exe tcp -region jp 3389
